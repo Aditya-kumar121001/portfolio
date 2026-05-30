@@ -24,9 +24,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ name, description, technologi
         <a href={github} className="flex items-center gap-2 hover:text-white">
           <FaGithub /> GitHub
         </a>
-        <a href={live} className="flex items-center gap-2 hover:text-white">
-          <TbWorld /> Live
-        </a>
       </div>
     </div>
   );
@@ -40,7 +37,6 @@ const ProjectsSection: React.FC = () => {
           "Developed an AI customer support agent to classify and escalate queries (Technical, Billing, General) using Gemini API for contextual responses and Natural library for sentiment-based escalation.",
         technologies: ["React.js", "TypeScript", "Node.js", "Express.js", "Gemini API", "Natural"],
         github: "https://github.com/Aditya-kumar121001/Multi-Agent-Customer-Support",
-        live: "#",
       },
       {
         name: "AI Research Agent",
@@ -48,7 +44,6 @@ const ProjectsSection: React.FC = () => {
           "Created an AI research agent with speech-to-text, allowing users to dictate queries and get insights from technical sources using Gemini API for context-aware responses.",
         technologies: ["React.js", "Node.js", "Gemini API", "Web Speech API"],
         github: "https://github.com/Aditya-kumar121001/AI-Research-Agent",
-        live: "#",
       },
       {
         name: "TalkToDB Agent",
@@ -56,7 +51,6 @@ const ProjectsSection: React.FC = () => {
           "Built an AI agent with RAG to handle natural language queries and retrieve database content via Pinecone, optimized with caching for faster responses.",
         technologies: ["React.js", "TypeScript", "Node.js", "Gemini API", "Pinecone", "MySQL"],
         github: "https://github.com/Aditya-kumar121001/talktodb-agent",
-        live: "#",
       },
     ];
 

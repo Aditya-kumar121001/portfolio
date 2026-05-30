@@ -17,7 +17,7 @@ const Sidebar: React.FC = () => {
           <div>
             <h1 className="text-white font-semibold flex items-center gap-1">
               Resume{" "}
-              <a href="https://drive.google.com/file/d/1DX8aLnOQq789euW5rIjftnbvXh6pWvLx/view?usp=sharing">
+              <a href="https://drive.google.com/file/d/1od1Yq3x0e9fd3-ww9NaWrs3qOl_Ce6zY/view?usp=sharing">
                 <FaExternalLinkAlt className="ml-1 text-xs" />
               </a>
             </h1>
@@ -84,9 +84,9 @@ const Sidebar: React.FC = () => {
       <div className="p-4 border-t border-gray-700">
         <div className="flex items-center">
           <img
-            src={userAvatar}
+            src={"/avatar.png"}
             alt="User Avatar"
-            className="w-10 h-10 rounded-full mr-3 object-cover"
+            className="w-12 h-12 rounded-full mr-3 object-center object-center p-0.1"
           />
           <div>
             <p className="text-white font-semibold">Aditya Kumar</p>

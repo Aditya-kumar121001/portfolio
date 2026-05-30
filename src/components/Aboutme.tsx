@@ -6,28 +6,28 @@ export default function Aboutme() {
       <span className="text-sky-500/100 text-xl">Hi, my name is</span>
       <h1 className="text-8xl font-bold mb-5 text-white">Aditya Kumar.</h1>
       <p className="text-xl text-gray-300">
-        I build things for the web. I’m a full-stack developer from India. Developing concepts into fully functional web applications is my area of expertise. 
-        With clear, effective code, I can assist you in realizing your vision, 
-        whether you're creating a product from the bottom up or enhancing an already-existing one.
+        I build AI-powered systems and full-stack applications with real-world impact.
+        Currently a Junior Research Fellow at NIT Raipur, I specialize in Conversational AI,
+        low-resource ASR, and voice-driven fintech turning complex problems into
+        production-ready solutions.
       </p>
       <section className="mt-12">
         <div className="flex justify-between gap-10">
           <div className="w-2/3">
             <h2 className="text-lg font-semibold mb-2 text-white">About me</h2>
             <p className="text-gray-300 mb-4">
-              I’m a full-stack developer from India, currently pursuing a Master
-              of Technology in Information Technology at the National Institute
-              of Technology, Raipur. I’m passionate about turning ideas into
-              functional, AI-driven web applications using modern technologies.
+              I'm a Conversational AI Engineer and Full-Stack Developer from India,
+              currently working as a Junior Research Fellow at the National Institute of
+              Technology, Raipur. My work sits at the intersection of speech AI, LLMs,
+              and fintech, building systems that solve real problems for real users,
+              including low-literacy and underbanked populations in regional India.
             </p>
             <p className="text-gray-300 mb-4">
-              I’ve gained hands-on experience as a Data Analyst Intern at
-              Fujitronix India Pvt. Ltd., where I honed my analytical skills.
-              Through building AI agents like the Multi Agent Customer Support
-              system and TalkToDB Agent, I’ve learned to integrate advanced NLP,
-              LLMs, and vector databases like Pinecone, mastering the art of
-              creating context-aware, efficient solutions with technologies such
-              as React, TypeScript, Node.js, and Gemini API.
+              I fine-tuned a Wav2Vec2 model for low-resource Chhattisgarhi ASR, achieving
+              a 16% WER reduction, and architected end-to-end voice-based UPI payment
+              workflows with Banking API integration. Beyond speech, I've built multi-agent
+              customer support systems, RAG-powered database agents, and AI research tools
+              using React, TypeScript, Node.js, Gemini API, and Pinecone.
             </p>
           </div>
 
