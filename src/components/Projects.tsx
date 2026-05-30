@@ -1,16 +1,14 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
-import { TbWorld } from "react-icons/tb";
 
 interface ProjectCardProps {
   name: string;
   description: string;
   technologies: string[];
-  github: string;
-  live: string;
+  github?: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ name, description, technologies, github, live }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ name, description, technologies, github }) => {
   return (
     <div className="bg-gray-700 text-white p-6 rounded-2xl w-92 shadow-lg border border-gray-700">
       <h3 className="text-lg font-semibold text-blue-400 mb-2">{name}</h3>
@@ -21,9 +19,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ name, description, technologi
         ))}
       </div>
       <div className="flex items-center justify-between text-gray-400 text-sm">
-        <a href={github} className="flex items-center gap-2 hover:text-white">
-          <FaGithub /> GitHub
-        </a>
+        {github && (
+          <a href={github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white">
+            <FaGithub /> GitHub
+          </a>
+        )}
       </div>
     </div>
   );
@@ -31,6 +31,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ name, description, technologi
 
 const ProjectsSection: React.FC = () => {
     const projects = [
+      {
+        name: "Chhattisgarhi ASR System",
+        description:
+          "Fine-tuned Wav2Vec2 for low-resource Chhattisgarhi speech recognition, achieving a 16% WER reduction. Integrated into a voice-first UPI payment pipeline serving low-literacy users with Banking API and deterministic intent recognition.",
+        technologies: ["Python", "Wav2Vec2", "HuggingFace", "Node.js", "NLP", "Speech-AI"],
+      },
       {
         name: "Multi Agent Customer Support",
         description:

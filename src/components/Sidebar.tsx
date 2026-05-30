@@ -5,7 +5,6 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import { Link } from "react-scroll";
 
 const Sidebar: React.FC = () => {
-  const userAvatar = "https://drive.google.com/file/d/1o_-gwW1smoTDbRpN-3E3uwOKeWKNeSac/view?usp=sharing";
   return (
     <div className="w-64 h-screen bg-gray-900 text-gray-300 flex flex-col justify-between sticky top-0">
       {/* Top Section: Logo and Title */}
@@ -86,7 +85,7 @@ const Sidebar: React.FC = () => {
           <img
             src={"/avatar.png"}
             alt="User Avatar"
-            className="w-12 h-12 rounded-full mr-3 object-center object-center p-0.1"
+            className="w-12 h-12 rounded-full mr-3 object-center p-0.1"
           />
           <div>
             <p className="text-white font-semibold">Aditya Kumar</p>
