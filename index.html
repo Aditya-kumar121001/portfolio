@@ -9,5 +9,41 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Conversia chatbot -->
+    <script>
+      window.conversiaSettings = {
+        domain: "portfolio",
+        mode: "chat",
+        api: "https://3-109-227-84.sslip.io/api",
+        app: "https://conversia-ps3o.onrender.com"
+        // email: "visitor@example.com"  // optional, skips the email prompt
+      };
+    </script>
+    <script>
+      (function () {
+        var w = window, d = document;
+        var c = w.Conversia;
+        if (typeof c === "function") {
+          c("reattach");
+          c("update", w.conversiaSettings);
+        } else {
+          var i = function () { i.c(arguments); };
+          i.q = [];
+          i.c = function (args) { i.q.push(args); };
+          w.Conversia = i;
+          var l = function () {
+            var s = d.createElement("script");
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = w.conversiaSettings.app + "/widget.js";
+            var x = d.getElementsByTagName("script")[0];
+            x.parentNode.insertBefore(s, x);
+          };
+          if (d.readyState === "complete") { l(); }
+          else { w.addEventListener("load", l, false); }
+        }
+      })();
+    </script>
   </body>
 </html>
