@@ -9,7 +9,7 @@ const App: React.FC = () => {
   return (
     <div className="flex min-h-screen">
       <Sidebar />
-      <div className="flex flex-1 flex-col bg-gray-800 p-10">
+      <div className="flex min-w-0 flex-1 flex-col bg-gray-800 pt-14 lg:p-10">
         <Aboutme/>
         <Experience/>
         <Education/>

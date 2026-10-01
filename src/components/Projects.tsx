@@ -10,7 +10,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ name, description, technologies, github }) => {
   return (
-    <div className="bg-gray-700 text-white p-6 rounded-2xl w-92 shadow-lg border border-gray-700">
+    <div className="bg-gray-700 text-white p-5 sm:p-6 rounded-2xl w-full shadow-lg border border-gray-700">
       <h3 className="text-lg font-semibold text-blue-400 mb-2">{name}</h3>
       <p className="text-gray-300 text-sm mb-4">{description}</p>
       <div className="flex flex-wrap gap-2 mb-4">
@@ -61,10 +61,10 @@ const ProjectsSection: React.FC = () => {
     ];
 
   return (
-    <section id="projects" className="min-h-screen flex items-center justify-center p-6 bg-gray-800 text-white">
+    <section id="projects" className="lg:min-h-screen flex items-center justify-center px-4 py-10 sm:p-6 bg-gray-800 text-white">
       <div className="w-full">
-        <h2 className="text-3xl font-bold mb-6">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-6">Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-10">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}

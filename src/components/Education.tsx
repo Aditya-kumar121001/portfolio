@@ -3,12 +3,12 @@ import { LuBook } from "react-icons/lu";
 export default function Education() {
   return (
     <>
-      <section id="education" className="min-h-screen flex items-center justify-center p-6">
+      <section id="education" className="lg:min-h-screen flex items-center justify-center px-4 py-10 sm:p-6">
         <div className="w-full">
-          <h2 className="text-3xl font-bold mb-6 text-white">Education</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-white">Education</h2>
           <div className="space-y-6">
-            <div className="flex items-center">
-              <LuBook className="text-gray-400 mr-4 mt-1" />
+            <div className="flex items-start">
+              <LuBook className="text-gray-400 mr-4 mt-1.5 shrink-0" />
               <div>
                 <h3 className="text-lg font-semibold text-white">
                 National Institute of Technology, Raipur, Chhattisgarh
@@ -18,8 +18,8 @@ export default function Education() {
               </div>
             </div>
 
-            <div className="flex items-center">
-              <LuBook className="text-gray-400 mr-4 mt-1" />
+            <div className="flex items-start">
+              <LuBook className="text-gray-400 mr-4 mt-1.5 shrink-0" />
               <div>
                 <h3 className="text-lg font-semibold text-white">
                 DPG Institute of Technology & Management, Gurugram, Haryana

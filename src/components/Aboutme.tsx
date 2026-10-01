@@ -2,18 +2,18 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 
 export default function Aboutme() {
   return (
-    <div id="home" className="min-h-screen p-6 bg-gray-800">
-      <span className="text-sky-500/100 text-xl">Hi, my name is</span>
-      <h1 className="text-8xl font-bold mb-5 text-white">Aditya Kumar.</h1>
-      <p className="text-xl text-gray-300">
+    <div id="home" className="lg:min-h-screen px-4 py-10 sm:p-6 bg-gray-800">
+      <span className="text-sky-500/100 text-lg md:text-xl">Hi, my name is</span>
+      <h1 className="text-5xl sm:text-6xl lg:text-8xl font-bold mb-5 text-white">Aditya Kumar.</h1>
+      <p className="text-lg md:text-xl text-gray-300">
         I build AI-powered systems and full-stack applications with real-world impact.
         Currently a Junior Research Fellow at NIT Raipur, I specialize in Conversational AI,
         low-resource ASR, and voice-driven fintech turning complex problems into
         production-ready solutions.
       </p>
-      <section className="mt-12">
-        <div className="flex justify-between gap-10">
-          <div className="w-2/3">
+      <section className="mt-10 md:mt-12">
+        <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-10">
+          <div className="w-full md:w-2/3">
             <h2 className="text-lg font-semibold mb-2 text-white">About me</h2>
             <p className="text-gray-300 mb-4">
               I'm a Conversational AI Engineer and Full-Stack Developer from India,
@@ -32,7 +32,7 @@ export default function Aboutme() {
           </div>
 
           {/* Contact Info Section */}
-          <div className="w-1/3 space-y-4">
+          <div className="w-full md:w-1/3 grid grid-cols-2 md:grid-cols-1 gap-4 content-start">
             {/* Location Card */}
             <div className="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <h3 className="text-sm font-semibold text-gray-400">Location</h3>
