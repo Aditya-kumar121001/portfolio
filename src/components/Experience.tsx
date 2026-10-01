@@ -1,45 +1,45 @@
-import { FaBuilding, FaFlask, FaLaptopCode } from "react-icons/fa";
+import { experiences } from "../data/profile";
+import Reveal from "./Reveal";
+import Section from "./Section";
+import Tag from "./Tag";
 
 export default function Experience() {
-  const experiences = [
-    {
-      icon: <FaFlask className="text-gray-400 mr-4 mt-1" />,
-      company: "NIT Raipur — IBITF",
-      role: "Junior Research Fellow (JRF) — Conversational AI & Full-Stack Engineer",
-      period: "Nov 2025 – Present",
-    },
-    {
-      icon: <FaBuilding className="text-gray-400 mr-4 mt-1" />,
-      company: "Fujitronix India Pvt. Ltd.",
-      role: "Data Analyst Intern",
-      period: "Jan 2023 – Apr 2023",
-    },
-    {
-      icon: <FaLaptopCode className="text-gray-400 mr-4 mt-1" />,
-      company: "Freelance",
-      role: "AI Full Stack Developer",
-      period: "Present",
-    }
-  ];
   return (
-    <section id="experience" className="lg:min-h-screen flex items-center justify-center px-4 py-10 sm:p-6">
-      <div className="w-full">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-white">Work Experience</h2>
-        <p className="text-gray-400 mb-8">All my professional experiences</p>
-
-        <div className="space-y-8">
-          {experiences.map((exp, index) => (
-            <div key={index} className="flex items-start">
-              <span className="shrink-0">{exp.icon}</span>
-              <div className="min-w-0">
-                <h3 className="text-lg font-semibold text-white">{exp.company}</h3>
-                <p className="text-white">{exp.role}</p>
-                <p className="text-gray-400 text-sm mb-3">{exp.period}</p>
+    <Section id="experience" index="02" title="Experience">
+      <ol className="group/list space-y-10 lg:space-y-2">
+        {experiences.map((exp, index) => (
+          <li
+            key={exp.company}
+            className="transition-opacity duration-300 lg:group-hover/list:opacity-50 lg:hover:opacity-100!"
+          >
+            <Reveal delay={index * 80}>
+              {/* Negative margin keeps text aligned while the hover background extends outward */}
+              <div className="group grid gap-2 sm:grid-cols-8 sm:gap-6 lg:-mx-5 lg:rounded-xl lg:p-5 lg:transition-colors lg:hover:bg-white/[0.03] lg:hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)]">
+                <p className="mt-1 font-mono text-xs uppercase tracking-wide text-zinc-500 sm:col-span-2">
+                  {exp.period}
+                </p>
+                <div className="sm:col-span-6">
+                  <h3 className="font-medium leading-snug text-zinc-100">
+                    <span className="transition-colors group-hover:text-sky-300">{exp.role}</span>
+                    <span className="text-zinc-600"> · </span>
+                    <span className="text-zinc-400">{exp.company}</span>
+                  </h3>
+                  {exp.summary && (
+                    <p className="mt-2 text-sm leading-relaxed text-zinc-400">{exp.summary}</p>
+                  )}
+                  {exp.tags && (
+                    <ul className="mt-3 flex flex-wrap gap-2" aria-label="Technologies used">
+                      {exp.tags.map((tag) => (
+                        <Tag key={tag}>{tag}</Tag>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+            </Reveal>
+          </li>
+        ))}
+      </ol>
+    </Section>
   );
 }

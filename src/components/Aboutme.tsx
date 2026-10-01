@@ -1,75 +1,78 @@
-import { FaExternalLinkAlt } from "react-icons/fa";
+import { LuCode, LuSparkles } from "react-icons/lu";
+import { toolkit } from "../data/profile";
+import Reveal from "./Reveal";
+import Section from "./Section";
+import SpotlightCard from "./SpotlightCard";
+
+const Em = ({ children }: { children: React.ReactNode }) => (
+  <span className="font-medium text-zinc-100">{children}</span>
+);
+
+const focusAreas = ["Speech AI & ASR", "LLMs, Agents & RAG", "Voice-driven Fintech"];
 
 export default function Aboutme() {
   return (
-    <div id="home" className="lg:min-h-screen px-4 py-10 sm:p-6 bg-gray-800">
-      <span className="text-sky-500/100 text-lg md:text-xl">Hi, my name is</span>
-      <h1 className="text-5xl sm:text-6xl lg:text-8xl font-bold mb-5 text-white">Aditya Kumar.</h1>
-      <p className="text-lg md:text-xl text-gray-300">
-        I build AI-powered systems and full-stack applications with real-world impact.
-        Currently a Junior Research Fellow at NIT Raipur, I specialize in Conversational AI,
-        low-resource ASR, and voice-driven fintech turning complex problems into
-        production-ready solutions.
-      </p>
-      <section className="mt-10 md:mt-12">
-        <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-10">
-          <div className="w-full md:w-2/3">
-            <h2 className="text-lg font-semibold mb-2 text-white">About me</h2>
-            <p className="text-gray-300 mb-4">
-              I'm a Conversational AI Engineer and Full-Stack Developer from India,
-              currently working as a Junior Research Fellow at the National Institute of
-              Technology, Raipur. My work sits at the intersection of speech AI, LLMs,
-              and fintech, building systems that solve real problems for real users,
-              including low-literacy and underbanked populations in regional India.
-            </p>
-            <p className="text-gray-300 mb-4">
-              I fine-tuned a Wav2Vec2 model for low-resource Chhattisgarhi ASR, achieving
-              a 16% WER reduction, and architected end-to-end voice-based UPI payment
-              workflows with Banking API integration. Beyond speech, I've built multi-agent
-              customer support systems, RAG-powered database agents, and AI research tools
-              using React, TypeScript, Node.js, Gemini API, and Pinecone.
-            </p>
-          </div>
-
-          {/* Contact Info Section */}
-          <div className="w-full md:w-1/3 grid grid-cols-2 md:grid-cols-1 gap-4 content-start">
-            {/* Location Card */}
-            <div className="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-sm font-semibold text-gray-400">Location</h3>
-              <p className="flex items-center text-gray-300">Gurgoan, India</p>
-            </div>
-
-            {/* Website Card */}
-            <div className="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-sm font-semibold text-gray-300 flex items-center gap-1">
-                Linkedin{" "}
-                <a href="https://www.linkedin.com/in/aditya-kumar-0669711b4/">
-                  <FaExternalLinkAlt className="ml-1 text-xs hover:text-blue-400" />
-                </a>
-              </h3>
-            </div>
-
-            {/* Website Card */}
-            <div className="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-sm font-semibold text-gray-300 flex items-center gap-1">
-                Github{" "}
-                <a href="https://www.linkedin.com/in/aditya-kumar-0669711b4/">
-                  <FaExternalLinkAlt className="ml-1 text-xs hover:text-blue-400" />
-                </a>
-              </h3>
-            </div>
-            {/* Website Card */}
-            <div className="p-4 bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-sm font-semibold text-gray-300 flex items-center gap-1">
-                Dribbble{" "}
-                <a href="https://www.linkedin.com/in/aditya-kumar-0669711b4/">
-                  <FaExternalLinkAlt className="ml-1 text-xs hover:text-blue-400" />
-                </a>
-              </h3>
-            </div>
-          </div>
+    <Section id="about" index="01" title="About">
+      <Reveal>
+        <div className="space-y-4 leading-relaxed text-zinc-400">
+          <p>
+            I'm a <Em>Conversational AI Engineer</Em> and <Em>Full-Stack Developer</Em> from India,
+            currently working as a Junior Research Fellow at the National Institute of Technology,
+            Raipur. My work sits at the intersection of speech AI, LLMs, and fintech, building
+            systems that solve real problems for real users, including low-literacy and underbanked
+            populations in regional India.
+          </p>
+          <p>
+            I fine-tuned a <Em>Wav2Vec2</Em> model for low-resource Chhattisgarhi ASR and architected
+            end-to-end <Em>voice-based UPI payment</Em> workflows with Banking API integration. Beyond
+            speech, I've built multi-agent customer support systems, RAG-powered database agents, and
+            AI research tools using React, TypeScript, Node.js, Gemini API, and Pinecone.
+          </p>
         </div>
-      </section>
-    </div>
+      </Reveal>
+
+      {/* Highlights */}
+      <div className="mt-10 grid gap-4">
+        <Reveal>
+          <SpotlightCard>
+            <div className="p-6">
+              <p className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-zinc-500">
+                <LuSparkles className="text-sm text-sky-400" />
+                Focus
+              </p>
+              <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+                {focusAreas.map((area) => (
+                  <li key={area} className="flex items-center gap-2 text-sm text-zinc-200">
+                    <span className="h-1 w-1 rounded-full bg-sky-400" />
+                    {area}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </SpotlightCard>
+        </Reveal>
+
+        <Reveal delay={80}>
+          <SpotlightCard>
+            <div className="p-6">
+              <p className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-zinc-500">
+                <LuCode className="text-sm text-sky-400" />
+                Toolkit
+              </p>
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {toolkit.map((tool) => (
+                  <li
+                    key={tool}
+                    className="rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-1.5 text-sm text-zinc-300"
+                  >
+                    {tool}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </SpotlightCard>
+        </Reveal>
+      </div>
+    </Section>
   );
 }
